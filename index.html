@@ -4,8 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    .btns-block {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ddd7cf;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #c2bdb7;
+    }
+
+    .btns-container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f1ece5;
+    }
+
+    .btns-wrapper {
+      border: 1px solid #c2bdb7;
+      padding: 50px;
+      border-radius: 10px;
+      background-color: #ebe5df;
+    }
+
+    .btns-score-container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .winner-results {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
+  <div class="btns-container">
+    <div class="btns-wrapper">
+      <div class="winner-results"></div>
+      <div class="btns-score-container">
+        <div style="display: flex; gap: 5px;">
+          <span>Player:</span>
+          <p class="btns-score-player">0</p>
+        </div>
+        <div style="display: flex; gap: 5px;">
+          <span>Computer:</span>
+          <p class="btns-score-computer">0</p>
+        </div>
+      </div>
+      <div class="btns-block">
+        <button class="btn" id="rock">Rock</button>
+        <button class="btn" id="paper">Paper</button>
+        <button class="btn" id="scissors">Scissors</button>
+      </div>
+    </div>
+    
+  </div>
+  
   <script src="script.js"></script>
 </body>
 </html>
